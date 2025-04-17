@@ -16,6 +16,9 @@ jobs:
     name: Build and Deploy Job
     steps:
       - uses: actions/checkout@v3
+
+      - name: Show dist contents
+        run: ls -R dist/
       
       # Deploy without triggering internal build
       - name: Deploy to Azure Static Web Apps
