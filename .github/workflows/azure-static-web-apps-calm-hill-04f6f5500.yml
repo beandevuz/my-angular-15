@@ -17,6 +17,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Build Angular App
+        run: npx ng build --configuration production
+
       - name: Show dist contents
         run: ls -R dist/
       
