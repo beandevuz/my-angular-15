@@ -23,7 +23,7 @@ jobs:
           node-version: 18
 
       - name: Build Angular App
-        run: npx ng build --configuration production
+        run: npm install
 
       - name: Show dist contents
         run: ls -R dist/
